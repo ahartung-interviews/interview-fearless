@@ -2,13 +2,14 @@ import { Button, Grid, Typography } from "@material-ui/core";
 import axios from "axios";
 import React, { useEffect } from "react";
 import { baseUrl, endpoints, keys } from "../Config/api";
+import GridItem from "./GridItem";
 
 export async function fetchCounterData(setResult) {
-    await axios
-        .get(`${baseUrl}/${endpoints.default}/${keys.default}`)
-        .then(response => response.data)
-        .then(({ value }) => setResult(value))
-        .catch(_ => _);
+  await axios
+    .get(`${baseUrl}/${endpoints.default}/${keys.default}`)
+    .then(response => response.data)
+    .then(({ value }) => setResult(value))
+    .catch(_ => _);
 }
 
 export default function ButtonWithDisplay() {
@@ -25,21 +26,15 @@ export default function ButtonWithDisplay() {
       alignItems="center"
       spacing={2}
     >
-      <Grid
-        item
-        xs={12}
-      >
+      <GridItem>
         <Typography
           variant="h6"
           color="primary"
         >
           {result}
         </Typography>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-      >
+      </GridItem>
+      <GridItem>
         <Button
           variant="contained"
           color="secondary"
@@ -47,7 +42,7 @@ export default function ButtonWithDisplay() {
         >
           Increment Counter
         </Button>
-      </Grid>
+      </GridItem>
     </Grid>
   );
 }
