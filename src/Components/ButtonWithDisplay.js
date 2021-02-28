@@ -12,7 +12,7 @@ export async function fetchCounterData(setResult) {
     .catch(_ => _);
 }
 
-export default function ButtonWithDisplay({ startingDisplay }) {
+export default function ButtonWithDisplay({ startingDisplay, buttonText }) {
   const [result, setResult] = React.useState(startingDisplay);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function ButtonWithDisplay({ startingDisplay }) {
           color="secondary"
           onClick={() => fetchCounterData(setResult)}
         >
-          Increment Counter
+          {buttonText}
         </Button>
       </GridItem>
     </Grid>

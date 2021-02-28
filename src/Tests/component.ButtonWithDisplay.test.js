@@ -26,6 +26,7 @@ test('fetches data on render', async () => {
 
 test('fetches data on click', async () => {
   // arrange
+  let buttonText = "test button text";
   let initialTestValue = "123";
   let updatedTestValue = "124";
   axios.get
@@ -42,8 +43,8 @@ test('fetches data on click', async () => {
 
   // act
   await act(async () => {
-    render(<ButtonWithDisplay />);
-    let component = screen.getByText(/increment counter/i);
+    render(<ButtonWithDisplay buttonText={buttonText} />);
+    let component = screen.getByText(buttonText);
     userEvent.click(component);
   });
 
