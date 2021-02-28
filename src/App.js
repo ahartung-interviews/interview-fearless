@@ -1,4 +1,4 @@
-import ButtonWithDisplay from "./Components/ButtonWithDisplay";
+import { ButtonWithDisplay } from "./Components";
 
 export default function App() {
   return (
