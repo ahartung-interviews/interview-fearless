@@ -43,6 +43,7 @@ export default function ButtonWithDisplay() {
         <Button
           variant="contained"
           color="secondary"
+          onClick={() => fetchCounterData(setResult)}
         >
           Increment Counter
         </Button>
