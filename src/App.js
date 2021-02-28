@@ -1,12 +1,7 @@
-import { Button } from "@material-ui/core";
+import ButtonWithDisplay from "./Components/ButtonWithDisplay";
 
 export default function App() {
   return (
-    <Button
-      variant="contained"
-      color="primary"
-    >
-      Increment Counter
-    </Button>
+    <ButtonWithDisplay />
   );
 }
