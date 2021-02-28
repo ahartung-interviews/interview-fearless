@@ -8,4 +8,5 @@ Interview project for [Fearless](https://fearless.tech/).
   * Configurable key
   * Configurable namespace
 * Component
+  * Loading indicator for fetches
   * Error handling and display
