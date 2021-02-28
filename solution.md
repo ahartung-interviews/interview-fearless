@@ -8,6 +8,7 @@ POC counter application
 
 1. `git clone` this repository
 1. Navigate to the application directory, e.g. `cd interview-fearless`
+1. First time runs may require an `npm install` before running or testing
 
 ## Run
 
