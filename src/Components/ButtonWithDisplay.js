@@ -12,8 +12,8 @@ export async function fetchCounterData(setResult) {
     .catch(_ => _);
 }
 
-export default function ButtonWithDisplay() {
-  const [result, setResult] = React.useState(null);
+export default function ButtonWithDisplay({ startingDisplay }) {
+  const [result, setResult] = React.useState(startingDisplay);
 
   useEffect(() => {
     fetchCounterData(setResult);
